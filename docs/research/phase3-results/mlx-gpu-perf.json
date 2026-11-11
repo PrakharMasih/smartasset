@@ -1,0 +1,81 @@
+{
+  "audio_5s_clip" : {
+    "count" : 200,
+    "max_ms" : 102.75050000101328,
+    "mean_ms" : 77.628219780065123,
+    "p50_ms" : 77.369958002120256,
+    "p95_ms" : 80.493166998028755,
+    "total_s" : 15.525643956013024
+  },
+  "audio_speech_clip" : {
+    "count" : 40,
+    "max_ms" : 82.996124997735023,
+    "mean_ms" : 73.073936474882061,
+    "p50_ms" : 73.50916700065136,
+    "p95_ms" : 80.199250001460314,
+    "total_s" : 2.9229574589952825
+  },
+  "audio_speech_seconds_total" : 169.03999999999996,
+  "backend" : "gpu",
+  "footprint_after_audio_mb" : 1211.564079284668,
+  "footprint_after_images_70_mb" : 1404.5800704956055,
+  "footprint_after_images_140_mb" : 1530.4082870483398,
+  "footprint_after_images_280_mb" : 1802.517822265625,
+  "footprint_after_text_mb" : 408.51663208007812,
+  "footprint_after_text_run_mb" : 1490.0174789428711,
+  "footprint_after_vision_mb" : 596.03239440917969,
+  "footprint_end_mb" : 1852.2522430419922,
+  "footprint_peak_mb" : 2576.064697265625,
+  "footprint_start_mb" : 6.7973556518554688,
+  "image_budget_70" : {
+    "count" : 500,
+    "max_ms" : 72.345833998173475,
+    "mean_ms" : 62.075632413901388,
+    "p50_ms" : 61.923333000391722,
+    "p95_ms" : 66.747290998697281,
+    "total_s" : 31.037816206950694
+  },
+  "image_budget_140" : {
+    "count" : 500,
+    "max_ms" : 123.81054200232029,
+    "mean_ms" : 114.55250123416633,
+    "p50_ms" : 113.88916600123048,
+    "p95_ms" : 119.75100000202656,
+    "total_s" : 57.276250617083164
+  },
+  "image_budget_280" : {
+    "count" : 500,
+    "max_ms" : 297.36625000089407,
+    "mean_ms" : 267.53785765002669,
+    "p50_ms" : 269.37704200297594,
+    "p95_ms" : 284.09074999764562,
+    "total_s" : 133.76892882501335
+  },
+  "load_audio_ms" : 165.31108400225639,
+  "load_text_ms" : 889.0230830013752,
+  "load_vision_ms" : 10.973292000591755,
+  "memory_cache_limit_mb" : 64,
+  "mlx" : {
+    "mlx_active_bytes" : 1044.2056922912598,
+    "mlx_cache_bytes" : 64.2352294921875,
+    "mlx_peak_bytes" : 1866.5338611602783
+  },
+  "runtime" : "EmbeddingGemma2Swift (MLX Swift 0.32.3), q8 text+vision, bf16 audio",
+  "text_batch32_per_text" : {
+    "count" : 79,
+    "max_ms" : 5.7463437505066395,
+    "mean_ms" : 3.0718735506451584,
+    "p50_ms" : 2.9146888125687838,
+    "p95_ms" : 3.9548020937945694,
+    "total_s" : 0.24267801050096749
+  },
+  "text_single" : {
+    "count" : 100,
+    "max_ms" : 292.79212499782443,
+    "mean_ms" : 13.551833800114691,
+    "p50_ms" : 10.257124997675419,
+    "p95_ms" : 12.715166997164488,
+    "total_s" : 1.3551833800114692
+  },
+  "thermal_at_end" : "fair"
+}

@@ -1,0 +1,21 @@
+
+== Measured resident memory for 250000 vectors at 768 dims (process RSS from ps; computed bytes beside it)
+  baseline process: 1.6 MB
+  f32 matrix        measured     748.3 MB   computed     732.4 MB
+  f16 matrix        measured     366.2 MB   computed     366.2 MB
+  int8 + scale      measured     184.0 MB   computed     184.1 MB
+  HNSW graph (M=16) measured     41.5 MB   computed      32.8 MB   (137 B/vector computed; built in 104.7 s)
+  everything alive: measured 1340.1 MB, computed sum 1315.5 MB (f32 732.4 + f16 + int8 + graph)
+  f32 source dropped, 3 s later: resident 1340.1 MB (change +0.0 MB); the f16 + int8 + graph that remain compute to 583.0 MB
+  (kept alive to the end: 192000000 f16 values, 250000 int8 vectors)
+
+== Measured resident memory for 250000 vectors at 512 dims (process RSS from ps; computed bytes beside it)
+  baseline process: 1.6 MB
+  f32 matrix        measured     498.3 MB   computed     488.3 MB
+  f16 matrix        measured     244.2 MB   computed     244.1 MB
+  int8 + scale      measured     123.0 MB   computed     123.0 MB
+  HNSW graph (M=16) measured     41.5 MB   computed      32.8 MB   (137 B/vector computed; built in 77.9 s)
+  everything alive: measured 907.0 MB, computed sum 888.2 MB (f32 488.3 + f16 + int8 + graph)
+  f32 source dropped, 3 s later: resident 907.0 MB (change +0.0 MB); the f16 + int8 + graph that remain compute to 399.9 MB
+  (kept alive to the end: 128000000 f16 values, 250000 int8 vectors)
+MEM-ALLDONE

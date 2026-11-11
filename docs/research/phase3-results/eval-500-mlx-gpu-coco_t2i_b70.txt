@@ -1,0 +1,30 @@
+
+== text -> image | mlx gpu (q8 text+vision | 2500 queries, 500 items, native 768d
+   dims store |   hit@1   hit@5  hit@10  MRR@10    P@10
+    768   f32 |   0.785   0.964   0.986   0.863   0.986
+    768   f16 |   0.785   0.964   0.986   0.863   0.986
+    768  int8 |   0.784   0.964   0.987   0.862   0.987
+    512   f32 |   0.782   0.962   0.986   0.861   0.986
+    512   f16 |   0.783   0.962   0.986   0.861   0.986
+    512  int8 |   0.782   0.963   0.986   0.861   0.986
+    256   f32 |   0.773   0.958   0.985   0.854   0.985
+    256   f16 |   0.772   0.958   0.985   0.853   0.985
+    256  int8 |   0.772   0.959   0.985   0.853   0.985
+    128   f32 |   0.696   0.922   0.965   0.793   0.965
+    128   f16 |   0.696   0.922   0.965   0.793   0.965
+    128  int8 |   0.694   0.922   0.965   0.792   0.965
+  per group at 768d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    long (13+ words)         352 |   0.838   0.997   0.905   0.997
+                                    medium (9-12 words)     1686 |   0.782   0.985   0.858   0.985
+                                    short (8 words or fewer)   462 |   0.755   0.983   0.847   0.983
+  rank of first relevant at 768d: 1 -> 1963 | 2-5 -> 448 | 6-10 -> 55 | 11-50 -> 28 | beyond 50 or not found -> 6
+    hard: rank  479 [medium (9-12 words)] A photo of an outside with various things in the scene.
+    hard: rank  174 [medium (9-12 words)] A photo of an outdoor with many things in the scene.
+    hard: rank   99 [medium (9-12 words)] An item inside the picture which appears to be truly astounding.
+    hard: rank   97 [medium (9-12 words)] An awesome blue pastel watercolor background is the backdrop of this picture.
+    hard: rank   62 [medium (9-12 words)] A very drab looking rest room without many decorations.
+  per group at 512d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    long (13+ words)         352 |   0.841   0.994   0.904   0.994
+                                    medium (9-12 words)     1686 |   0.775   0.985   0.855   0.985
+                                    short (8 words or fewer)   462 |   0.764   0.983   0.851   0.983
+  rank of first relevant at 512d: 1 -> 1956 | 2-5 -> 450 | 6-10 -> 59 | 11-50 -> 30 | beyond 50 or not found -> 5

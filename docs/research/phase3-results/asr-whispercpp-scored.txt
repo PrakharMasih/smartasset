@@ -1,0 +1,36 @@
+
+== whisper.cpp v1.9.5 (Metal) | small-fp16 | load 125 ms | peak memory 856 MB
+  group                         n     WER     CER     RTF  notes
+  english                       8   0.017   0.015   0.035  
+  hindi                         8   0.391   0.213   0.119  
+      worst tts-hi2: WER 0.73  “अग्रिप्या आवास को छोरा दीमा कीजे और संँित बन्त कर दीजे”
+  hinglish                      8   0.546   0.545   0.150  
+      worst tts-hg0: WER 0.64  “आजका वलाग बहुत मजजेदार है क्योंकि हमने ब्रोन से पुरा शहेहर शूर क्या”
+  indian_english                8   0.017   0.015   0.032  
+  librispeech (real speech)    40   0.028   0.014   0.023  
+  noisy_english                 8   0.017   0.015   0.036  
+  timeline: 5 of 8 sentence starts located; error median 0.25 s, p90 0.90 s, max 0.90 s
+
+== whisper.cpp v1.9.5 (Metal) | large-v3-turbo-fp16 | load 387 ms | peak memory 1930 MB
+  group                         n     WER     CER     RTF  notes
+  english                       8   0.026   0.017   0.098  
+  hindi                         8   0.218   0.099   0.172  
+      worst tts-hi2: WER 0.36  “खृपिया आवास को थोड़ा धीमा कीजे और संगीत बंद कर दीजे”
+  hinglish                      8   0.289   0.407   0.158  
+      worst tts-hg5: WER 0.42  “मैंने इस विदियो का वोईस ओवर हिंदी और इंग्लिश दोनों में बनाया है”
+  indian_english                8   0.034   0.023   0.091  
+  librispeech (real speech)    40   0.026   0.012   0.048  
+  noisy_english                 8   0.026   0.017   0.102  
+  timeline: 8 of 8 sentence starts located; error median 0.22 s, p90 0.90 s, max 0.90 s
+
+== whisper.cpp v1.9.5 (Metal) | large-v3-turbo-q5_0 | load 143 ms | peak memory 859 MB
+  group                         n     WER     CER     RTF  notes
+  english                       8   0.017   0.011   0.101  
+  hindi                         8   0.184   0.087   0.155  
+      worst tts-hi6: WER 0.33  “इंतर्वियू के बाद हम बाजार की आवाजें रिकॉर्ड करेंगे”
+  hinglish                      8   0.289   0.402   0.136  
+      worst tts-hg5: WER 0.42  “मैंने इस विदियो का वोईस ओवर हिंदी और इंग्लिश दोनों में बनाया है”
+  indian_english                8   0.034   0.023   0.092  
+  librispeech (real speech)    40   0.028   0.012   0.046  
+  noisy_english                 8   0.009   0.002   0.099  
+  timeline: 8 of 8 sentence starts located; error median 0.22 s, p90 0.90 s, max 0.90 s

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleIdentifier</key><string>com.prakharmasih.smartasset</string>
+<key>CFBundleName</key><string>SmartAsset</string>
+<key>CFBundleDisplayName</key><string>SmartAsset</string>
+<key>CFBundleExecutable</key><string>SmartAsset</string>
+<key>CFBundleIconFile</key><string>AppIcon</string>
+<key>CFBundleIconName</key><string>AppIcon</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>0.1</string>
+<key>CFBundleVersion</key><string>__BUILD__</string>
+<key>LSMinimumSystemVersion</key><string>14.0</string>
+<key>LSApplicationCategoryType</key><string>public.app-category.photography</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSPrincipalClass</key><string>NSApplication</string>
+<key>CFBundleDocumentTypes</key>
+<array><dict>
+  <key>CFBundleTypeName</key><string>Folder</string>
+  <key>CFBundleTypeRole</key><string>Viewer</string>
+  <key>LSHandlerRank</key><string>None</string>
+  <key>LSItemContentTypes</key><array><string>public.folder</string></array>
+</dict></array>
+<key>NSDesktopFolderUsageDescription</key><string>SmartAsset reads the folders you add so you can search them. It never changes your files.</string>
+<key>NSDocumentsFolderUsageDescription</key><string>SmartAsset reads the folders you add so you can search them. It never changes your files.</string>
+<key>NSDownloadsFolderUsageDescription</key><string>SmartAsset reads the folders you add so you can search them. It never changes your files.</string>
+<key>NSRemovableVolumesUsageDescription</key><string>SmartAsset reads the folders you add on this drive so you can search them. It never changes your files.</string>
+<key>NSNetworkVolumesUsageDescription</key><string>SmartAsset reads the folders you add on this network drive so you can search them. It never changes your files.</string>
+</dict></plist>

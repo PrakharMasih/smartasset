@@ -1,0 +1,25 @@
+{
+  "captions_as_documents_seconds" : 60.757977750003334,
+  "captions_as_queries_seconds" : 81.297998250000177,
+  "footprint_after_load_mb" : 615.34489440917969,
+  "footprint_after_text_mb" : 1092.5797500610352,
+  "footprint_peak_mb" : 1679.8145599365234,
+  "footprint_start_mb" : 14.703628540039062,
+  "image_budget_70" : {
+    "count" : 5000,
+    "max_ms" : 88.444917000830173,
+    "mean_ms" : 73.437356563573331,
+    "p50_ms" : 73.642875000834465,
+    "p95_ms" : 78.438333000987768,
+    "total_s" : 367.18678281786663
+  },
+  "images" : 5000,
+  "load_ms" : 888.99000000208616,
+  "mlx_memory_mb" : {
+    "mlx_active_bytes" : 461.29108047485352,
+    "mlx_cache_bytes" : 64.095372200012207,
+    "mlx_peak_bytes" : 1273.2609310150146
+  },
+  "runtime" : "EmbeddingGemma2Swift (MLX Swift 0.32.3), q8 text+vision, bf16 audio",
+  "thermal_at_end" : "fair"
+}

@@ -1,0 +1,94 @@
+{
+  "child_process" : {
+    "after_kill9" : {
+      "app_survived" : true,
+      "in_flight_request_outcome" : "provider process died: exit status 9, reason 2",
+      "ms_from_kill_to_error_seen" : 104.03020799905062,
+      "ms_to_restart_and_prepare" : 1129.2943750023842,
+      "next_request_ok" : true
+    },
+    "app_footprint_after_child_exit_mb" : 209.46991729736328,
+    "app_footprint_after_prepare_mb" : 206.62616729736328,
+    "app_footprint_before_mb" : 206.59491729736328,
+    "app_footprint_peak_mb" : 1553.8922958374023,
+    "child_footprint_mb" : 1211.6421585083008,
+    "child_footprint_peak_mb" : 1366.0328979492188,
+    "image_70" : {
+      "count" : 30,
+      "max_ms" : 640.72258300334215,
+      "mean_ms" : 87.224349933614334,
+      "p50_ms" : 60.929832998663187,
+      "p95_ms" : 125.48341599851847,
+      "total_s" : 2.6167304980084301
+    },
+    "image_throughput" : {
+      "images_per_s_batch8" : 18.424904203249913,
+      "images_per_s_inflight_1" : 16.818427425349011,
+      "images_per_s_inflight_2" : 16.709986197697866,
+      "images_per_s_inflight_4" : 16.765824924720643
+    },
+    "main_thread_lateness" : {
+      "max_ms" : 2.0542499981820583,
+      "over_16ms" : 0,
+      "p50_ms" : 1.6058750003576279,
+      "p99_ms" : 1.9849589988589287,
+      "ticks" : 946
+    },
+    "prepare_ms_including_process_start" : 1285.1170409992337,
+    "text_single" : {
+      "count" : 30,
+      "max_ms" : 4235.1405829973519,
+      "mean_ms" : 165.26536119952797,
+      "p50_ms" : 10.834333997219801,
+      "p95_ms" : 16.754582997411489,
+      "total_s" : 4.9579608359858396
+    },
+    "thermal_at_end" : "nominal"
+  },
+  "idle_main_thread_lateness" : {
+    "max_ms" : 2.0653330013155937,
+    "over_16ms" : 0,
+    "p50_ms" : 1.615666002035141,
+    "p99_ms" : 2.0459159985184669,
+    "ticks" : 375
+  },
+  "in_process" : {
+    "app_footprint_after_prepare_mb" : 1211.1109085083008,
+    "app_footprint_after_release_mb" : 206.59491729736328,
+    "app_footprint_before_mb" : 3.3129348754882812,
+    "app_footprint_peak_mb" : 1553.8922958374023,
+    "image_70" : {
+      "count" : 30,
+      "max_ms" : 71.170792002230883,
+      "mean_ms" : 62.938975133746865,
+      "p50_ms" : 62.967957999557257,
+      "p95_ms" : 67.125459000468254,
+      "total_s" : 1.8881692540124058
+    },
+    "image_throughput" : {
+      "images_per_s_batch8" : 18.522520890857415,
+      "images_per_s_inflight_1" : 16.533601315470779,
+      "images_per_s_inflight_2" : 19.128216905375815,
+      "images_per_s_inflight_4" : 19.057844367633951
+    },
+    "main_thread_lateness" : {
+      "max_ms" : 2.0353330001235008,
+      "over_16ms" : 0,
+      "p50_ms" : 1.554542001336813,
+      "p99_ms" : 2.0132080018520355,
+      "ticks" : 279
+    },
+    "prepare_ms" : 1288.4665420018137,
+    "text_single" : {
+      "count" : 30,
+      "max_ms" : 40.637625001370907,
+      "mean_ms" : 11.678098666792115,
+      "p50_ms" : 10.282874997705221,
+      "p95_ms" : 11.653250001370907,
+      "total_s" : 0.35034296000376342
+    },
+    "thermal_at_end" : "nominal"
+  },
+  "machine_thermal_start" : "nominal",
+  "runtime" : "mlx-gpu"
+}

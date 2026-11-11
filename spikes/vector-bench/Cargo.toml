@@ -1,0 +1,17 @@
+# Phase 3 throwaway spike: vector storage cost, int8 quantization, HNSW vs brute force, filtered search.
+# Not part of the core workspace and not shipped. Safe Rust only, because the product forbids `unsafe` outside sa-ffi.
+[package]
+name = "vector-bench"
+version = "0.0.0"
+edition = "2024"
+publish = false
+
+[workspace]
+
+[dependencies]
+rayon = "1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1
+opt-level = 3

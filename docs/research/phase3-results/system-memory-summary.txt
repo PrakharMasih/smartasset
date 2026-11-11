@@ -1,0 +1,11 @@
+System-wide memory while transcribing the 8.3-minute English recording once (3 runs each; 'mean +MB' / 'peak +MB' = increase over the quiet-machine baseline taken just before).
+Memory in use = app memory + wired + compressed, as Activity Monitor counts it: includes memory held for the process by other services (Core ML, GPU).
+
+                                      seconds         mean +MB (3 runs)         peak +MB (3 runs)  process peak MB  cpu s  worst thermal
+idle control (nothing running)             25             [52, 98, 232]           [119, 209, 382]                1    0.0  nominal
+WhisperKit Large-v3 Turbo 626MB            28         [1049, 1015, 984]        [1233, 1237, 1167]              192    7.5  nominal
+WhisperKit Small 216MB                     25           [652, 598, 762]          [1085, 676, 921]              190   11.7  nominal
+whisper.cpp Large-v3 Turbo q5_0            14        [1295, 1305, 1322]        [1326, 1449, 1441]              922    4.3  nominal
+whisper.cpp Large-v3 Turbo fp16            16        [2147, 2214, 2055]        [2383, 2377, 2202]             2013    4.7  nominal
+
+Energy: not measured. The kernel's per-process energy counters read 0.0-0.2 J for runs that used 4-12 s of CPU (and GPU/Neural Engine work is not billed to the process); powermetrics needs root. See spikes/asr/energy_session.sh.

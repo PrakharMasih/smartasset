@@ -1,0 +1,32 @@
+{
+  "baseline_idle_samples" : 32,
+  "baseline_system_used_mb" : 10225.203125,
+  "billed_energy_joules_last_sample" : 0.016920029999999999,
+  "command" : [
+    "\/Users\/prakharmasih\/Library\/Developer\/SmartAsset\/phase3\/work\/whispercpp-build\/bin\/whisper-cli",
+    "-m",
+    "\/Users\/prakharmasih\/Library\/Developer\/SmartAsset\/phase3\/models\/ggml\/ggml-large-v3-turbo.bin",
+    "-f",
+    "\/Users\/prakharmasih\/Library\/Developer\/SmartAsset\/phase3\/data\/asr\/long\/timeline_long.wav",
+    "-l",
+    "en",
+    "--max-context",
+    "0",
+    "--dtw",
+    "large.v3.turbo",
+    "--no-flash-attn",
+    "-nt",
+    "-np"
+  ],
+  "cpu_utilisation_of_one_core" : 0.28700541575352251,
+  "exit" : 0,
+  "process_cpu_seconds" : 4.7576497083333331,
+  "process_footprint_peak_mb" : 2006.7521743774414,
+  "samples" : 65,
+  "seconds" : 16.576863874997944,
+  "serviced_energy_joules_last_sample" : 0,
+  "system_used_increase_mean_mb" : 2146.9865384615387,
+  "system_used_increase_peak_mb" : 2383.4375,
+  "thermal_at_end" : "nominal",
+  "worst_thermal_state" : "nominal"
+}

@@ -1,0 +1,19 @@
+{
+  "captions_as_documents_seconds" : 339.48057037500104,
+  "captions_as_queries_seconds" : 430.25371620799973,
+  "footprint_after_text_mb" : 663.57931518554688,
+  "footprint_peak_mb" : 815.98561096191406,
+  "footprint_start_mb" : 11.797355651855469,
+  "image_budget_70" : {
+    "count" : 5000,
+    "max_ms" : 147.28879199922085,
+    "mean_ms" : 103.90173573960364,
+    "p50_ms" : 102.44462499953806,
+    "p95_ms" : 111.67958300001919,
+    "total_s" : 519.50867869801823
+  },
+  "images" : 5000,
+  "load_ms" : 325.68995900079608,
+  "runtime" : "LiteRT-LM 0.19.1 (GPU), int4\/int8 QAT 740M bundle",
+  "thermal_at_end" : "fair"
+}

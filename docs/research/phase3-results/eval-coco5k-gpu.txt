@@ -1,0 +1,60 @@
+
+== text -> image | litert-lm gpu (int4\/int8 QAT) | 25000 queries, 5000 items, native 768d
+   dims store |   hit@1   hit@5  hit@10  MRR@10    P@10
+    768   f32 |   0.530   0.772   0.845   0.633   0.845
+    768   f16 |   0.530   0.772   0.845   0.633   0.845
+    768  int8 |   0.530   0.772   0.845   0.633   0.845
+    512   f32 |   0.529   0.768   0.842   0.631   0.842
+    512   f16 |   0.529   0.768   0.842   0.631   0.842
+    512  int8 |   0.528   0.767   0.841   0.630   0.841
+    256   f32 |   0.508   0.752   0.833   0.612   0.833
+    256   f16 |   0.508   0.752   0.833   0.612   0.833
+    256  int8 |   0.508   0.752   0.832   0.612   0.832
+    128   f32 |   0.421   0.669   0.763   0.527   0.763
+    128   f16 |   0.420   0.669   0.762   0.527   0.762
+    128  int8 |   0.420   0.669   0.762   0.527   0.762
+  per group at 768d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    long (13+ words)        3435 |   0.675   0.914   0.758   0.914
+                                    medium (9-12 words)    17252 |   0.518   0.840   0.623   0.840
+                                    short (8 words or fewer)  4313 |   0.465   0.807   0.576   0.807
+  rank of first relevant at 768d: 1 -> 13254 | 2-5 -> 6044 | 6-10 -> 1818 | 11-50 -> 3063 | beyond 50 or not found -> 821
+    hard: rank 4736 [medium (9-12 words)] A photo of an outside with various things in the scene.
+    hard: rank 4623 [medium (9-12 words)] There is no image showing on this page to describe.
+    hard: rank 4604 [short (8 words or fewer)] Here is a soul in the image alone.
+    hard: rank 4589 [short (8 words or fewer)] I am unable to see the image above.
+    hard: rank 4580 [medium (9-12 words)] There is no image for me to write about.
+  per group at 512d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    long (13+ words)        3435 |   0.673   0.910   0.754   0.910
+                                    medium (9-12 words)    17252 |   0.516   0.837   0.621   0.837
+                                    short (8 words or fewer)  4313 |   0.464   0.807   0.574   0.807
+  rank of first relevant at 512d: 1 -> 13222 | 2-5 -> 5980 | 6-10 -> 1843 | 11-50 -> 3112 | beyond 50 or not found -> 843
+
+== caption -> other captions of the same image | litert-lm gpu (int4\/int8 QAT) | 5000 queries, 20000 items, native 768d
+   dims store |   hit@1   hit@5  hit@10  MRR@10    P@10
+    768   f32 |   0.431   0.663   0.754   0.530   0.447
+    768   f16 |   0.431   0.664   0.754   0.530   0.447
+    768  int8 |   0.431   0.664   0.755   0.530   0.447
+    512   f32 |   0.432   0.664   0.754   0.531   0.447
+    512   f16 |   0.432   0.664   0.754   0.531   0.447
+    512  int8 |   0.430   0.662   0.755   0.530   0.447
+    256   f32 |   0.430   0.662   0.752   0.528   0.445
+    256   f16 |   0.430   0.662   0.752   0.528   0.445
+    256  int8 |   0.429   0.661   0.751   0.528   0.445
+    128   f32 |   0.414   0.647   0.736   0.513   0.424
+    128   f16 |   0.413   0.647   0.736   0.512   0.424
+    128  int8 |   0.412   0.650   0.735   0.512   0.425
+  per group at 768d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    long (13+ words)         657 |   0.554   0.837   0.640   0.530
+                                    medium (9-12 words)     3557 |   0.416   0.747   0.517   0.440
+                                    short (8 words or fewer)   786 |   0.393   0.718   0.497   0.408
+  rank of first relevant at 768d: 1 -> 2153 | 2-5 -> 1164 | 6-10 -> 455 | 11-50 -> 825 | beyond 50 or not found -> 403
+    hard: rank 10526 [medium (9-12 words)] A photo of an outside with various things in the scene.
+    hard: rank 8698 [medium (9-12 words)] An individual is in the open view in the image.
+    hard: rank 7204 [medium (9-12 words)] A photograph of an outside with numerous things in the scene.
+    hard: rank 5289 [medium (9-12 words)] A couple of men standing next to each other.
+    hard: rank 3995 [medium (9-12 words)] It is a territory with numerous things to watch.
+  per group at 512d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    long (13+ words)         657 |   0.556   0.837   0.642   0.533
+                                    medium (9-12 words)     3557 |   0.416   0.747   0.517   0.439
+                                    short (8 words or fewer)   786 |   0.399   0.719   0.500   0.409
+  rank of first relevant at 512d: 1 -> 2160 | 2-5 -> 1160 | 6-10 -> 451 | 11-50 -> 826 | beyond 50 or not found -> 403

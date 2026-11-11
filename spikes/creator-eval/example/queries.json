@@ -1,0 +1,2 @@
+[{"id": "q1", "text": "where I explain the battery problem", "feature": "S2", "difficulty": "hard", "language": "en",
+  "relevant": [{"item": "demo-1", "start": 4.0, "end": 9.5}], "hard_negatives": ["demo-1", "demo-2"]}]

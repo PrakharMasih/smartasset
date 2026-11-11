@@ -1,0 +1,34 @@
+
+== text -> sound | mlx gpu (q8 text+vision | 50 queries, 200 items, native 768d
+   dims store |   hit@1   hit@5  hit@10  MRR@10    P@10
+    768   f32 |   0.240   0.600   0.780   0.382   0.435
+    768   f16 |   0.240   0.620   0.780   0.383   0.435
+    768  int8 |   0.240   0.620   0.780   0.383   0.440
+    512   f32 |   0.260   0.540   0.760   0.396   0.445
+    512   f16 |   0.260   0.540   0.760   0.396   0.440
+    512  int8 |   0.260   0.520   0.760   0.393   0.445
+    256   f32 |   0.280   0.540   0.700   0.375   0.410
+    256   f16 |   0.280   0.540   0.700   0.376   0.410
+    256  int8 |   0.280   0.520   0.680   0.371   0.405
+    128   f32 |   0.300   0.500   0.600   0.379   0.350
+    128   f16 |   0.300   0.480   0.600   0.379   0.355
+    128  int8 |   0.280   0.500   0.620   0.379   0.355
+  per group at 768d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    animals                   10 |   0.200   0.700   0.269   0.250
+                                    exterior/urban            10 |   0.300   0.700   0.428   0.400
+                                    human non-speech          10 |   0.300   0.800   0.475   0.500
+                                    interior/domestic         10 |   0.100   0.800   0.229   0.325
+                                    natural soundscapes       10 |   0.300   0.900   0.508   0.700
+  rank of first relevant at 768d: 1 -> 12 | 2-5 -> 18 | 6-10 -> 9 | 11-50 -> 10 | beyond 50 or not found -> 1
+    hard: rank   83 [interior/domestic] door wood creaks
+    hard: rank   44 [natural soundscapes] water drops
+    hard: rank   24 [exterior/urban] fireworks
+    hard: rank   22 [animals] rooster
+    hard: rank   19 [animals] sheep
+  per group at 512d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    animals                   10 |   0.200   0.600   0.258   0.250
+                                    exterior/urban            10 |   0.400   0.700   0.481   0.425
+                                    human non-speech          10 |   0.200   0.800   0.428   0.525
+                                    interior/domestic         10 |   0.100   0.800   0.224   0.325
+                                    natural soundscapes       10 |   0.400   0.900   0.592   0.700
+  rank of first relevant at 512d: 1 -> 13 | 2-5 -> 14 | 6-10 -> 11 | 11-50 -> 11 | beyond 50 or not found -> 1

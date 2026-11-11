@@ -1,0 +1,34 @@
+
+== speech clip -> text (generated speech; 5 voice\/noise groups) | mlx gpu (q8 text+vision | 40 queries, 24 items, native 768d
+   dims store |   hit@1   hit@5  hit@10  MRR@10    P@10
+    768   f32 |   0.975   1.000   1.000   0.988   1.000
+    768   f16 |   0.975   1.000   1.000   0.988   1.000
+    768  int8 |   0.975   1.000   1.000   0.988   1.000
+    512   f32 |   0.975   1.000   1.000   0.988   1.000
+    512   f16 |   0.975   1.000   1.000   0.988   1.000
+    512  int8 |   0.975   1.000   1.000   0.988   1.000
+    256   f32 |   0.950   1.000   1.000   0.975   1.000
+    256   f16 |   0.950   1.000   1.000   0.975   1.000
+    256  int8 |   0.950   1.000   1.000   0.975   1.000
+    128   f32 |   0.900   1.000   1.000   0.942   1.000
+    128   f16 |   0.900   1.000   1.000   0.942   1.000
+    128  int8 |   0.925   1.000   1.000   0.954   1.000
+  per group at 768d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    english                    8 |   1.000   1.000   1.000   1.000
+                                    hindi                      8 |   0.875   1.000   0.938   1.000
+                                    hinglish                   8 |   1.000   1.000   1.000   1.000
+                                    indian_english             8 |   1.000   1.000   1.000   1.000
+                                    noisy_english              8 |   1.000   1.000   1.000   1.000
+  rank of first relevant at 768d: 1 -> 39 | 2-5 -> 1 | 6-10 -> 0 | 11-50 -> 0 | beyond 50 or not found -> 0
+    hard: rank    2 [hindi] Lekha: हमारे पॉडकास्ट में आज एक नए लेखक से बातचीत होगी।
+    hard: rank    1 [english] Samantha: This drone shot flies over a glacier at sunrise and the light is warm on the ice
+    hard: rank    1 [english] Daniel: Welcome back to the channel, today we are testing three microphones in a noisy kit
+    hard: rank    1 [english] Samantha: Add a slow zoom on the interview, then cut to the wide shot of the studio.
+    hard: rank    1 [english] Daniel: The podcast episode covers how small teams ship software without any managers.
+  per group at 512d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    english                    8 |   1.000   1.000   1.000   1.000
+                                    hindi                      8 |   0.875   1.000   0.938   1.000
+                                    hinglish                   8 |   1.000   1.000   1.000   1.000
+                                    indian_english             8 |   1.000   1.000   1.000   1.000
+                                    noisy_english              8 |   1.000   1.000   1.000   1.000
+  rank of first relevant at 512d: 1 -> 39 | 2-5 -> 1 | 6-10 -> 0 | 11-50 -> 0 | beyond 50 or not found -> 0

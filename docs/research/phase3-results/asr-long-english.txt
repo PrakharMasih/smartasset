@@ -1,0 +1,28 @@
+######## LONG ENGLISH RECORDING: 40 real utterances joined into 8.3 min, 40 known sentence starts (true start good to about 0.05 s)
+variants: default = whisper-cli defaults; mc0 = --max-context 0; dtw = --dtw <model> --no-flash-attn (DTW-aligned word times); vad = Silero VAD
+== WhisperKit 1.1.1 (Core ML, ANE/GPU) | long-wk-large | load 1626 ms | peak memory 191 MB
+  longform (real speech)        1   0.024   0.012   0.051  
+  timeline-long: 40 of 40 sentence starts located; error median 0.15 s, p90 0.52 s, max 2.39 s
+== WhisperKit 1.1.1 (Core ML, ANE/GPU) | long-wk-small | load 807 ms | peak memory 196 MB
+  longform (real speech)        1   0.028   0.015   0.051  
+  timeline-long: 40 of 40 sentence starts located; error median 0.32 s, p90 0.52 s, max 0.57 s
+== whisper.cpp v1.9.5 (Metal) | long-q5_0 | load 139 ms | peak memory 945 MB
+  longform (real speech)        1   0.163   0.148   0.022  
+  timeline-long: 37 of 40 sentence starts located; error median 1.49 s, p90 3.19 s, max 9.40 s
+== whisper.cpp v1.9.5 (Metal) | long-q5_0-mc0 | load 145 ms | peak memory 896 MB
+  longform (real speech)        1   0.085   0.073   0.019  
+  timeline-long: 35 of 40 sentence starts located; error median 1.93 s, p90 3.38 s, max 4.56 s
+== whisper.cpp v1.9.5 (Metal) | long-q5_0-mc0-dtw | load 127 ms | peak memory 933 MB
+  longform (real speech)        1   0.106   0.092   0.026  
+  timeline-long: 34 of 40 sentence starts located; error median 0.10 s, p90 0.30 s, max 0.48 s
+== whisper.cpp v1.9.5 (Metal) | long-q5_0-mc0-dtw-vad | load 128 ms | peak memory 957 MB
+  longform (real speech)        1   0.210   0.194   0.021  
+  timeline-long: 30 of 40 sentence starts located; error median 50.04 s, p90 96.49 s, max 101.15 s
+== whisper.cpp v1.9.5 (Metal) | long-turbo-fp16 | load 391 ms | peak memory 2008 MB
+  longform (real speech)        1   0.296   0.277   0.025  
+      worst timeline-long: WER 0.30  “he hoped there would be stew for dinner turnips and carrots and bruise”
+  timeline-long: 33 of 40 sentence starts located; error median 1.76 s, p90 4.68 s, max 24.85 s
+== whisper.cpp v1.9.5 (Metal) | long-small-mc0-dtw | load 130 ms | peak memory 976 MB
+  longform (real speech)        1   0.281   0.274   0.016  
+      worst timeline-long: WER 0.28  “he hoped there would be stew for dinner turnips and carrots and bruise”
+  timeline-long: 26 of 40 sentence starts located; error median 0.10 s, p90 0.25 s, max 3.58 s

@@ -1,0 +1,29 @@
+Word error rate (lower is better); each cell is one group of 8 utterances, LibriSpeech 40 (real speech)
+  engine / model                                        en       en-IN       noisy LibriSpeech          hi       hi-en
+  whisper.cpp v1.9.5 small-fp16                      0.017       0.017       0.017       0.028       0.391       0.546
+  whisper.cpp v1.9.5 large-v3-turbo-fp16             0.026       0.034       0.026       0.026       0.218       0.289
+  whisper.cpp v1.9.5 large-v3-turbo-q5_0             0.017       0.034       0.009       0.028       0.184       0.289
+  WhisperKit 1.1.1 small-216MB-fair                  0.017       0.009       0.017       0.028       0.483       0.722
+  WhisperKit 1.1.1 large-v3-626MB-fair               0.026       0.034       0.026       0.021       0.207       0.289
+
+Character error rate on Hindi and Hinglish
+  whisper.cpp v1.9.5 small-fp16                      0.213       0.545
+  whisper.cpp v1.9.5 large-v3-turbo-fp16             0.099       0.407
+  whisper.cpp v1.9.5 large-v3-turbo-q5_0             0.087       0.402
+  WhisperKit 1.1.1 small-216MB-fair                  0.300       0.650
+  WhisperKit 1.1.1 large-v3-626MB-fair               0.102       0.394
+
+Real-time factor, whole file in / text out, model load excluded (lower is faster; 0.05 = 20x faster than real time)
+  engine / model                               LibriSpeech          en          hi       hi-en
+  whisper.cpp v1.9.5 small-fp16                      0.033       0.055       0.158       0.191
+  whisper.cpp v1.9.5 large-v3-turbo-fp16             0.060       0.122       0.211       0.194
+  whisper.cpp v1.9.5 large-v3-turbo-q5_0             0.056       0.122       0.191       0.167
+  WhisperKit 1.1.1 small-216MB-fair                  0.055       0.081       0.495       1.100
+  WhisperKit 1.1.1 large-v3-626MB-fair               0.087       0.174       0.328       0.295
+
+Sentence-start timestamps on the 59.5 s timeline clip (8 sentences)
+  whisper.cpp v1.9.5 small-fp16                located 5/8; median error 0.25 s, p90 0.90 s, max 0.90 s
+  whisper.cpp v1.9.5 large-v3-turbo-fp16       located 8/8; median error 0.22 s, p90 0.90 s, max 0.90 s
+  whisper.cpp v1.9.5 large-v3-turbo-q5_0       located 8/8; median error 0.22 s, p90 0.90 s, max 0.90 s
+  WhisperKit 1.1.1 small-216MB-fair            located 8/8; median error 0.11 s, p90 0.47 s, max 0.47 s
+  WhisperKit 1.1.1 large-v3-626MB-fair         located 8/8; median error 0.04 s, p90 0.19 s, max 0.19 s

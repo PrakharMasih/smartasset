@@ -1,0 +1,24 @@
+{
+  "baseline_idle_samples" : 32,
+  "baseline_system_used_mb" : 10121.171875,
+  "billed_energy_joules_last_sample" : 0.14351175399999999,
+  "command" : [
+    "\/usr\/bin\/env",
+    "CFFIXED_USER_HOME=\/Users\/prakharmasih\/Library\/Developer\/SmartAsset\/phase3\/home",
+    "ASR_MANIFEST=manifest_long.json",
+    "\/Users\/prakharmasih\/Library\/Developer\/SmartAsset\/phase3\/work\/whisperkit-bench\/.build\/release\/whisperkit-run",
+    "openai_whisper-large-v3-v20240930_626MB",
+    "sys-wk-large"
+  ],
+  "cpu_utilisation_of_one_core" : 0.26919111221437231,
+  "exit" : 0,
+  "process_cpu_seconds" : 7.417404125,
+  "process_footprint_peak_mb" : 191.59461975097656,
+  "samples" : 108,
+  "seconds" : 27.554416875001042,
+  "serviced_energy_joules_last_sample" : 0,
+  "system_used_increase_mean_mb" : 1014.8311631944445,
+  "system_used_increase_peak_mb" : 1237.265625,
+  "thermal_at_end" : "nominal",
+  "worst_thermal_state" : "nominal"
+}

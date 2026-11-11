@@ -1,0 +1,94 @@
+{
+  "child_process" : {
+    "after_kill9" : {
+      "app_survived" : true,
+      "in_flight_request_outcome" : "provider process died: exit status 9, reason 2",
+      "ms_from_kill_to_error_seen" : 75.410042002797127,
+      "ms_to_restart_and_prepare" : 369.43524999916553,
+      "next_request_ok" : true
+    },
+    "app_footprint_after_child_exit_mb" : 73.735313415527344,
+    "app_footprint_after_prepare_mb" : 73.688438415527344,
+    "app_footprint_before_mb" : 73.672813415527344,
+    "app_footprint_peak_mb" : 649.61049652099609,
+    "child_footprint_mb" : 421.86040496826172,
+    "child_footprint_peak_mb" : 647.6729736328125,
+    "image_70" : {
+      "count" : 30,
+      "max_ms" : 103.55966699868441,
+      "mean_ms" : 99.989163966849446,
+      "p50_ms" : 99.690999999642372,
+      "p95_ms" : 102.13637499883771,
+      "total_s" : 2.9996749190054834
+    },
+    "image_throughput" : {
+      "images_per_s_batch8" : 10.083044197787926,
+      "images_per_s_inflight_1" : 10.075513701904418,
+      "images_per_s_inflight_2" : 10.06843784647536,
+      "images_per_s_inflight_4" : 10.065808542964668
+    },
+    "main_thread_lateness" : {
+      "max_ms" : 2.0408330000936985,
+      "over_16ms" : 0,
+      "p50_ms" : 1.4077920019626617,
+      "p99_ms" : 1.9991669990122318,
+      "ticks" : 522
+    },
+    "prepare_ms_including_process_start" : 1317.8795829974115,
+    "text_single" : {
+      "count" : 30,
+      "max_ms" : 686.97104199975729,
+      "mean_ms" : 39.452109767124057,
+      "p50_ms" : 17.116791002452374,
+      "p95_ms" : 17.203333999961615,
+      "total_s" : 1.1835632930137217
+    },
+    "thermal_at_end" : "nominal"
+  },
+  "idle_main_thread_lateness" : {
+    "max_ms" : 2.0583330001682043,
+    "over_16ms" : 0,
+    "p50_ms" : 1.4562500007450581,
+    "p99_ms" : 2.0225409995764494,
+    "ticks" : 375
+  },
+  "in_process" : {
+    "app_footprint_after_prepare_mb" : 439.59482574462891,
+    "app_footprint_after_release_mb" : 73.657188415527344,
+    "app_footprint_before_mb" : 5.0005264282226562,
+    "app_footprint_peak_mb" : 649.61049652099609,
+    "image_70" : {
+      "count" : 30,
+      "max_ms" : 112.90283400006592,
+      "mean_ms" : 101.58590976664176,
+      "p50_ms" : 101.1529580000788,
+      "p95_ms" : 102.94199999980628,
+      "total_s" : 3.0475772929992528
+    },
+    "image_throughput" : {
+      "images_per_s_batch8" : 10.094038676141817,
+      "images_per_s_inflight_1" : 10.009594874420211,
+      "images_per_s_inflight_2" : 10.092889186508147,
+      "images_per_s_inflight_4" : 10.095056968159131
+    },
+    "main_thread_lateness" : {
+      "max_ms" : 2.0262499991804361,
+      "over_16ms" : 0,
+      "p50_ms" : 1.5483749993145466,
+      "p99_ms" : 1.9944589994847775,
+      "ticks" : 455
+    },
+    "prepare_ms" : 577.31099999882281,
+    "text_single" : {
+      "count" : 30,
+      "max_ms" : 91.315666999667883,
+      "mean_ms" : 19.801438866866132,
+      "p50_ms" : 17.307708000764251,
+      "p95_ms" : 18.121125001460314,
+      "total_s" : 0.59404316600598395
+    },
+    "thermal_at_end" : "nominal"
+  },
+  "machine_thermal_start" : "nominal",
+  "runtime" : "litert-gpu"
+}

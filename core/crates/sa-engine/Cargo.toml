@@ -1,0 +1,28 @@
+[package]
+name = "sa-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+sa-core.workspace = true
+sa-store.workspace = true
+sa-jobs.workspace = true
+sa-index.workspace = true
+sa-watch.workspace = true
+sa-search.workspace = true
+sa-dedupe.workspace = true
+sa-providers.workspace = true
+sa-vector.workspace = true
+blake3.workspace = true
+crossbeam-channel.workspace = true
+parking_lot.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+rusqlite.workspace = true

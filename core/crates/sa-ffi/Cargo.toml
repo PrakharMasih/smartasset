@@ -1,0 +1,34 @@
+[package]
+name = "sa-ffi"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lib]
+name = "sa_ffi"
+crate-type = ["staticlib", "lib"]
+
+[[bin]]
+name = "uniffi-bindgen"
+path = "src/bin/uniffi-bindgen.rs"
+
+[dependencies]
+sa-core.workspace = true
+sa-store.workspace = true
+sa-engine.workspace = true
+sa-providers.workspace = true
+sa-dedupe.workspace = true
+sa-jobs.workspace = true
+sa-watch.workspace = true
+parking_lot.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tracing-appender = "0.2"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt"] }
+uniffi = { version = "0.32", features = ["tokio", "cli"] }
+tokio = { version = "1", features = ["rt-multi-thread", "sync", "time"] }
+
+# UniFFI's generated scaffolding contains `unsafe`; this is the only crate allowed to (plan §6.4).
+[lints.rust]
+unsafe_code = "allow"

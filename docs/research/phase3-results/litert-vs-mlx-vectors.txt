@@ -1,0 +1,20 @@
+== coco_t2i_b70: litert-lm gpu (int4/int8 QAT)  vs  mlx gpu (q8 text+vision, bf16 audio)  (2500 queries, 500 items, 768d)
+  query cosine : mean 0.9919  min 0.9662  p5 0.9883  median 0.9923
+  corpus cosine: mean 0.9760  min 0.9424  p5 0.9603  median 0.9774
+  top-10 overlap 0.844   top-1 same 0.893
+== coco_t2i_b140: litert-lm gpu (int4/int8 QAT)  vs  mlx gpu (q8 text+vision, bf16 audio)  (2500 queries, 500 items, 768d)
+  query cosine : mean 0.9919  min 0.9662  p5 0.9883  median 0.9923
+  corpus cosine: mean 0.9834  min 0.9253  p5 0.9740  median 0.9847
+  top-10 overlap 0.870   top-1 same 0.911
+== esc_t2s: litert-lm gpu (int4/int8 QAT)  vs  mlx gpu (q8 text+vision, bf16 audio)  (50 queries, 200 items, 768d)
+  query cosine : mean 0.9906  min 0.9811  p5 0.9848  median 0.9914
+  corpus cosine: mean 0.9382  min 0.9042  p5 0.9190  median 0.9386
+  top-10 overlap 0.582   top-1 same 0.340
+== speech_t2a: litert-lm gpu (int4/int8 QAT)  vs  mlx gpu (q8 text+vision, bf16 audio)  (24 queries, 40 items, 768d)
+  query cosine : mean 0.9599  min 0.8432  p5 0.8461  median 0.9874
+  corpus cosine: mean 0.9779  min 0.9482  p5 0.9498  median 0.9820
+  top-10 overlap 0.817   top-1 same 0.833
+== speech_a2t: litert-lm gpu (int4/int8 QAT)  vs  mlx gpu (q8 text+vision, bf16 audio)  (40 queries, 24 items, 768d)
+  query cosine : mean 0.9779  min 0.9482  p5 0.9498  median 0.9820
+  corpus cosine: mean 0.9622  min 0.8772  p5 0.8811  median 0.9849
+  top-10 overlap 0.843   top-1 same 0.975

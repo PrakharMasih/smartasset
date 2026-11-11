@@ -1,0 +1,34 @@
+######## REAL HINDI (FLEURS, 40 utterances)
+
+== whisper.cpp v1.9.5 (Metal) | hindi-q5_0 | load 147 ms | peak memory 847 MB
+  group                         n     WER     CER     RTF  notes
+  hindi (real speech, FLEURS)  40   0.303   0.122   0.059  
+      worst fleurs-1939: WER 1.00  “तो पहाता है तो बाद गयों से भीप बुड़ कर दो दो कर दो कर दो”
+
+== whisper.cpp v1.9.5 (Metal) | hindi-turbo-fp16 | load 424 ms | peak memory 1925 MB
+  group                         n     WER     CER     RTF  notes
+  hindi (real speech, FLEURS)  40   0.300   0.123   0.075  
+      worst fleurs-1939: WER 1.00  “तो पाता हैं तो बादे बादे हैं सब्साइब बादे हैं सब्साइब बादे हैं”
+
+== WhisperKit 1.1.1 (Core ML, ANE/GPU) | hindi-wk-large | load 1682 ms | peak memory 138 MB
+  group                         n     WER     CER     RTF  notes
+  hindi (real speech, FLEURS)  40   0.347   0.162   0.303  1 of 40 answered in Roman script
+      worst fleurs-1939: WER 1.00  “”
+  language detection on Hindi + Hinglish clips (no language given): 34 of 40 detected as hi; others: fleurs-1847->ur, fleurs-1862->ur, fleurs-1869->ur, fleurs-1939->en, fleurs-1977->ur, fleurs-1794->en
+######## LONG RECORDING (40 real utterances, 8.3 min, 40 known starts)
+
+== whisper.cpp v1.9.5 (Metal) | long-q5_0 | load 139 ms | peak memory 945 MB
+  group                         n     WER     CER     RTF  notes
+  longform (real speech)        1   0.163   0.148   0.022  
+  timeline-long: 37 of 40 sentence starts located; error median 1.49 s, p90 3.19 s, max 9.40 s
+
+== whisper.cpp v1.9.5 (Metal) | long-turbo-fp16 | load 391 ms | peak memory 2008 MB
+  group                         n     WER     CER     RTF  notes
+  longform (real speech)        1   0.296   0.277   0.025  
+      worst timeline-long: WER 0.30  “he hoped there would be stew for dinner turnips and carrots and bruise”
+  timeline-long: 33 of 40 sentence starts located; error median 1.76 s, p90 4.68 s, max 24.85 s
+
+== WhisperKit 1.1.1 (Core ML, ANE/GPU) | long-wk-large | load 1626 ms | peak memory 191 MB
+  group                         n     WER     CER     RTF  notes
+  longform (real speech)        1   0.024   0.012   0.051  
+  timeline-long: 40 of 40 sentence starts located; error median 0.15 s, p90 0.52 s, max 2.39 s

@@ -1,0 +1,17 @@
+== idle
+launched_to_ready_ms=352 files=250000 launched_to_first_grid_ms<=985 results=250000 scroll ticks=990 late_p50_ms=0.1 late_p99_ms=7.7 late_max_ms=12.6 ticks_over_8ms_late=2 
+launched_to_ready_ms=347 files=250000 launched_to_first_grid_ms<=987 results=250000 scroll ticks=993 late_p50_ms=0.1 late_p99_ms=7.7 late_max_ms=9.7 ticks_over_8ms_late=5 
+launched_to_ready_ms=349 files=250000 launched_to_first_grid_ms<=954 results=250000 scroll ticks=993 late_p50_ms=0.1 late_p99_ms=7.6 late_max_ms=10.6 ticks_over_8ms_late=4 
+== with LiteRT-LM embedding on the GPU in another process
+launched_to_ready_ms=362 files=250000 launched_to_first_grid_ms<=1002 results=250000 scroll ticks=1000 late_p50_ms=-0.1 late_p99_ms=5.0 late_max_ms=5.5 ticks_over_8ms_late=0 
+launched_to_ready_ms=349 files=250000 launched_to_first_grid_ms<=989 results=250000 scroll ticks=1000 late_p50_ms=-0.1 late_p99_ms=5.0 late_max_ms=6.5 ticks_over_8ms_late=0 
+launched_to_ready_ms=356 files=250000 launched_to_first_grid_ms<=970 results=250000 scroll ticks=1000 late_p50_ms=-0.1 late_p99_ms=5.0 late_max_ms=5.5 ticks_over_8ms_late=0 
+== with MLX embedding on the GPU in another process
+launched_to_ready_ms=413 files=250000 launched_to_first_grid_ms<=1014 results=250000 scroll ticks=999 late_p50_ms=-0.1 late_p99_ms=5.6 late_max_ms=7.8 ticks_over_8ms_late=0 
+launched_to_ready_ms=409 files=250000 launched_to_first_grid_ms<=1039 results=250000 scroll ticks=1000 late_p50_ms=-0.1 late_p99_ms=5.2 late_max_ms=7.6 ticks_over_8ms_late=0 
+launched_to_ready_ms=442 files=250000 launched_to_first_grid_ms<=1082 results=250000 scroll ticks=1000 late_p50_ms=-0.1 late_p99_ms=5.4 late_max_ms=6.9 ticks_over_8ms_late=0 
+== idle again
+launched_to_ready_ms=374 files=250000 launched_to_first_grid_ms<=1010 results=250000 scroll ticks=995 late_p50_ms=0.1 late_p99_ms=7.5 late_max_ms=12.8 ticks_over_8ms_late=2 
+launched_to_ready_ms=347 files=250000 launched_to_first_grid_ms<=987 results=250000 scroll ticks=997 late_p50_ms=0.2 late_p99_ms=7.3 late_max_ms=13.8 ticks_over_8ms_late=1 
+launched_to_ready_ms=346 files=250000 launched_to_first_grid_ms<=974 results=250000 scroll ticks=996 late_p50_ms=0.1 late_p99_ms=7.4 late_max_ms=12.4 ticks_over_8ms_late=2 
+UI-ALLDONE

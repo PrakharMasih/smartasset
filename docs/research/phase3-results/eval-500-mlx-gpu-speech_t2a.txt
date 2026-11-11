@@ -1,0 +1,30 @@
+
+== text -> speech clip (generated speech; English | mlx gpu (q8 text+vision | 24 queries, 40 items, native 768d
+   dims store |   hit@1   hit@5  hit@10  MRR@10    P@10
+    768   f32 |   0.917   1.000   1.000   0.948   1.000
+    768   f16 |   0.917   1.000   1.000   0.948   1.000
+    768  int8 |   0.917   1.000   1.000   0.948   1.000
+    512   f32 |   0.917   1.000   1.000   0.958   1.000
+    512   f16 |   0.917   1.000   1.000   0.958   1.000
+    512  int8 |   0.917   1.000   1.000   0.951   1.000
+    256   f32 |   0.917   1.000   1.000   0.948   1.000
+    256   f16 |   0.917   1.000   1.000   0.948   1.000
+    256  int8 |   0.917   1.000   1.000   0.948   1.000
+    128   f32 |   0.958   1.000   1.000   0.979   1.000
+    128   f16 |   0.958   1.000   1.000   0.979   1.000
+    128  int8 |   0.958   1.000   1.000   0.979   1.000
+  per group at 768d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    english                    8 |   1.000   1.000   1.000   1.000
+                                    hindi                      8 |   0.750   1.000   0.844   1.000
+                                    hinglish                   8 |   1.000   1.000   1.000   1.000
+  rank of first relevant at 768d: 1 -> 22 | 2-5 -> 2 | 6-10 -> 0 | 11-50 -> 0 | beyond 50 or not found -> 0
+    hard: rank    4 [hindi] कृपया आवाज़ को थोड़ा धीमा कीजिए और संगीत बंद कर दीजिए।
+    hard: rank    2 [hindi] कल सुबह हम सब स्टूडियो में मिलेंगे और शूटिंग शुरू करेंगे।
+    hard: rank    1 [english] This drone shot flies over a glacier at sunrise and the light is warm on the ice.
+    hard: rank    1 [english] Welcome back to the channel, today we are testing three microphones in a noisy kitchen.
+    hard: rank    1 [english] Add a slow zoom on the interview, then cut to the wide shot of the studio.
+  per group at 512d f32:   group                      n |   hit@1  hit@10  MRR@10    P@10
+                                    english                    8 |   1.000   1.000   1.000   1.000
+                                    hindi                      8 |   0.750   1.000   0.875   1.000
+                                    hinglish                   8 |   1.000   1.000   1.000   1.000
+  rank of first relevant at 512d: 1 -> 22 | 2-5 -> 2 | 6-10 -> 0 | 11-50 -> 0 | beyond 50 or not found -> 0

@@ -1,0 +1,20 @@
+{
+  "baseline_idle_samples" : 32,
+  "baseline_system_used_mb" : 10001.421875,
+  "billed_energy_joules_last_sample" : 2.8499999999999998e-06,
+  "command" : [
+    "\/bin\/sleep",
+    "25"
+  ],
+  "cpu_utilisation_of_one_core" : 0.00010482493024738113,
+  "exit" : 0,
+  "process_cpu_seconds" : 0.0026429166666666667,
+  "process_footprint_peak_mb" : 0.82830810546875,
+  "samples" : 99,
+  "seconds" : 25.212672791000454,
+  "serviced_energy_joules_last_sample" : 0,
+  "system_used_increase_mean_mb" : 232.40909090909091,
+  "system_used_increase_peak_mb" : 382.140625,
+  "thermal_at_end" : "nominal",
+  "worst_thermal_state" : "nominal"
+}

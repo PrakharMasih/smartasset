@@ -1,0 +1,82 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/sa-core",
+    "crates/sa-store",
+    "crates/sa-jobs",
+    "crates/sa-index",
+    "crates/sa-watch",
+    "crates/sa-search",
+    "crates/sa-dedupe",
+    "crates/sa-vector",
+    "crates/sa-providers",
+    "crates/sa-engine",
+    "crates/sa-ffi",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "UNLICENSED"
+publish = false
+
+[workspace.dependencies]
+sa-core = { path = "crates/sa-core" }
+sa-store = { path = "crates/sa-store" }
+sa-jobs = { path = "crates/sa-jobs" }
+sa-index = { path = "crates/sa-index" }
+sa-watch = { path = "crates/sa-watch" }
+sa-search = { path = "crates/sa-search" }
+sa-dedupe = { path = "crates/sa-dedupe" }
+sa-vector = { path = "crates/sa-vector" }
+sa-providers = { path = "crates/sa-providers" }
+sa-engine = { path = "crates/sa-engine" }
+
+blake3 = "1"
+crossbeam-channel = "0.5"
+notify = "8"
+parking_lot = "0.13"
+proptest = "1"
+rayon = "1"
+rusqlite = { version = "0.41", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+tempfile = "3"
+thiserror = "2"
+tracing = "0.1"
+walkdir = "2"
+
+# Plan §11: clippy pedantic as errors, no unwrap() outside tests, `unsafe` only in sa-ffi.
+[workspace.lints.rust]
+unsafe_code = "forbid"
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+pedantic = { level = "warn", priority = -1 }
+unwrap_used = "deny"
+# Pedantic lints that add noise without catching bugs in this codebase.
+module_name_repetitions = "allow"
+# Brand and API names (SQLite, ImageIO, AVFoundation) are everywhere in the docs.
+doc_markdown = "allow"
+missing_errors_doc = "allow"
+missing_panics_doc = "allow"
+must_use_candidate = "allow"
+return_self_not_must_use = "allow"
+similar_names = "allow"
+too_many_lines = "allow"
+struct_excessive_bools = "allow"
+# Row ids, sizes and timestamps are i64 in SQLite and u64/usize in Rust; every
+# conversion is checked at the boundary instead of silenced here.
+cast_possible_truncation = "warn"
+cast_sign_loss = "warn"
+cast_possible_wrap = "warn"
+cast_precision_loss = "allow"
+
+[profile.release]
+lto = "thin"
+codegen-units = 4
+panic = "unwind"      # a panic must never cross the bridge; sa-ffi catches it
+debug = "line-tables-only"
+
+[profile.dev]
+opt-level = 1         # SQLite and hashing are unusably slow at opt-level 0
